@@ -4,7 +4,7 @@ name: "JS Actions"
 on: [push]
 
 jobs:
-  action:
+  hello-world-action:
     runs-on: "ubuntu-latest"
     steps:
       - uses: actions/checkout@v1
@@ -29,3 +29,12 @@ jobs:
           first-greeting: "Learning Lab User 1"
           second-greeting: "Learning Lab User 2"
           third-greeting: "Learning Lab User 3"
+
+  joke-action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: ha-ha
+        uses: ./.github/actions/joke-action
