@@ -9,7 +9,23 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: "hello-action"
+      - name: "Action with no input params | Hello Action"
+        uses: ./.github/actions/hello-world
+
+      - name: "Action with only 1 input params | Hello Action"
         uses: ./.github/actions/hello-world
         with:
-          first-greeting: "Learning Lab User"
+          first-greeting: "Learning Lab User 1"
+
+      - name: "Action with only 2 input params | Hello Action"
+        uses: ./.github/actions/hello-world
+        with:
+          first-greeting: "Learning Lab User 1"
+          second-greeting: "Learning Lab User 2"
+
+      - name: "Action with all 3 input params | Hello Action"
+        uses: ./.github/actions/hello-world
+        with:
+          first-greeting: "Learning Lab User 1"
+          second-greeting: "Learning Lab User 2"
+          third-greeting: "Learning Lab User 3"
